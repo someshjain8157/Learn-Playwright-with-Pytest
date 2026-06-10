@@ -5,5 +5,5 @@ import pytest
 def browser_type_launch_args():
     return {
         "headless": False,
-        "slow_mo": 5000,
+        "slow_mo": 1000,
     }

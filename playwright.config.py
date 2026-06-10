@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 
 config = {
     "headless": False,
-    "slow_mo": 1000,
+    "slow_mo": 5000,
     "timeout": 30000,  # 30 seconds
     "viewport": {"width": 1280, "height": 720},
 }

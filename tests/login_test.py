@@ -5,7 +5,7 @@ def test_login_form_submit(page):
     page.goto("https://the-internet.herokuapp.com/login")
 
     page.locator("#username").fill("tomsmith")
-    page.locator("#password").fill("SuperSecretPassword!")
+    page.locator("#password").type("SuperSecretPassword!")
     page.get_by_role("button", name="Login").click()
 
     expect(page).to_have_url("https://the-internet.herokuapp.com/secure")

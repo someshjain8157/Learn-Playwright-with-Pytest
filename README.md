@@ -74,7 +74,24 @@ Example22: test_record_video.py, Record browser test execution.
 Example23: test_trace_gen_viewer.py, Trace generator and viewer
 Command: playwright show-trace trace.zip
 
+Example24: Assertions expect(): 
+expect(locator).to_be_visible()
+expect(locator).to_be_hidden()
+expect(locator).to_be_enabled()
+expect(locator).to_be_disabled()
+expect(locator).to_be_editable()
+expect(locator).to_be_checked()
+expect(locator).not_to_be_checked()
+expect(locator).to_have_text()
+expect(locator).to_contain_text()
+expect(locator).to_have_value()
+expect(locator).to_have_attribute()
+expect(locator).to_have_class()
+expect(locator).to_have_count()
+expect(locator).to_be_focused()
+expect(page).to_have_title()
+expect(page).to_have_url()
 
+Example 25: Distributed Parallel Execution: Run Tests in parellel using pytest-xdist. run test_parallel_run_google.py, test_t_parallel_run_github.py, test_t_parallel_run_bootswatch.py in parallel in different browser instances.
 
-
-
+Command: pytest .\tests\test_parallel_run_bootswatch.py .\tests\test_parallel_run_google.py .\tests\test_parallel_rungithub.py -n 4

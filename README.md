@@ -95,3 +95,31 @@ expect(page).to_have_url()
 Example 25: Distributed Parallel Execution: Run Tests in parellel using pytest-xdist. run test_parallel_run_google.py, test_t_parallel_run_github.py, test_t_parallel_run_bootswatch.py in parallel in different browser instances.
 
 Command: pytest .\tests\test_parallel_run_bootswatch.py .\tests\test_parallel_run_google.py .\tests\test_parallel_rungithub.py -n 4
+
+Example 26: Rerun failed testcases: 1 failed out of 3 testcases. currect the input url and rerun only the failed testcases.
+pytest .\tests\test_async_parallel_para_execution.py 
+Command: pytest tests/test_async_parallel_para_execution.py --lf
+Command: pytest tests/test_async_parallel_para_execution.py --last-failed
+Command pytest--last-failedtest_async
+
+Example 26: test_api_post_get_json.py, Reading data from a users.json file and load in database using post api, and displaying data using get api.
+Example 27: Running get and post apis from excel and compare expected output with actual json output. mismatched data to be written in root/logs folder in mismatched.txt
+
+project_root/
+│
+├── api_testdata.xlsx
+│
+├── expected_resp/
+│   ├── TC001_resp_expected.json
+│   ├── TC002_resp_expected.json
+│
+├── actual_resp/
+│   ├── TC001_resp_actual.json
+│   ├── TC002_resp_actual.json
+├── utils/
+│   ├── excel_reader.py
+│   └── json_utils.py
+│
+└── tests/
+    └── test_api_validation.py
+

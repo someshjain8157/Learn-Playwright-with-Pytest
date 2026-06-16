@@ -102,8 +102,9 @@ Command: pytest tests/test_async_parallel_para_execution.py --lf
 Command: pytest tests/test_async_parallel_para_execution.py --last-failed
 Command pytest--last-failedtest_async
 
-Example 26: test_api_post_get_json.py, Reading data from a users.json file and load in database using post api, and displaying data using get api.
-Example 27: Running get and post apis from excel and compare expected output with actual json output. mismatched data to be written in root/logs folder in mismatched.txt
+Example 27: test_api_post_get_json.py, Reading data from a users.json file and load in database using post api, and displaying data using get api.
+
+Example 28: Running get and post apis from excel and compare expected output with actual json output. mismatched data to be written in root/logs folder in mismatched.txt
 
 project_root/
 │

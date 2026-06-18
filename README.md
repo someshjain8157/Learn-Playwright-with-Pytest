@@ -125,6 +125,7 @@ project_root/
     └── test_api_validation.py
 
 Expample 29: Configure allure Report:
+Download allure and specify the path in env path: C:\allure-2.42.1\bin
 pytest.ini:
 [pytest]
 addopts = --alluredir=allure-results --video retain-on-failure --screenshot on

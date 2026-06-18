@@ -19,7 +19,7 @@ def test_create_user(playwright, user_data):
         "https://reqres.in/api/users",
         data=user_data,
         headers={
-            "x-api-key": "reqres_7ab3d4a09a9a4c588a77dae9f4d4029b"
+            "x-api-key": "reqres_7db3d4a09a9a4c588a77dae9f4d4029b"
         }
     )
 

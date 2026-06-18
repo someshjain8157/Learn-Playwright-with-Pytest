@@ -124,3 +124,38 @@ project_root/
 └── tests/
     └── test_api_validation.py
 
+Expample 29: Configure allure Report:
+pytest.ini:
+[pytest]
+addopts = --alluredir=allure-results --video retain-on-failure --screenshot on
+
+tests/conftest.py:
+import subprocess
+import os
+
+
+def pytest_sessionfinish(session, exitstatus):
+    try:
+        subprocess.run(
+            [
+                "allure.bat",
+                "generate",
+                "allure-results",
+                "-o",
+                "allure-report",
+                "--clean"
+            ],
+            shell=True,
+            check=True
+        )
+
+        print("\n✅ Allure HTML generated: allure-report/index.html")
+
+    except Exception as e:
+        print(f"\n❌ Allure generation failed: {e}")
+
+Command: allure open allure-report    
+Starting web server...
+Server started at <http://127.0.0.1:64584>. Press <Ctrl+C> to exit    
+
+

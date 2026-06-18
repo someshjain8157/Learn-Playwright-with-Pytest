@@ -3,8 +3,6 @@ import subprocess
 import os
 
 
-import subprocess
-
 
 def pytest_sessionfinish(session, exitstatus):
     try:
